@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contacto-styles.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero contacto-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>CONTÁCTANOS PARA SER PARTE DEL CAMBIO</h1>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="social-media-section">
+    <div class="container">
+        <h2>Más cerca al cambio</h2>
+        <p class="text-center">Visita nuestras redes sociales</p>
+
+        <div class="social-links">
+            <div class="social-link-item" data-platform="facebook">
+                <h3>FACEBOOK</h3>
+                <a href="#" class="btn primary small">VER</a>
+            </div>
+
+            <div class="social-link-item" data-platform="instagram">
+                <h3>INSTAGRAM</h3>
+                <a href="#" class="btn primary small">VER</a>
+            </div>
+
+            <div class="social-link-item" data-platform="tiktok">
+                <h3>TIK TOK</h3>
+                <a href="#" class="btn primary small">VER</a>
+            </div>
+
+            <div class="social-link-item" data-platform="twitter">
+                <h3>TWITTER</h3>
+                <a href="#" class="btn primary small">VER</a>
+            </div>
+        </div>
+
+        <!-- Social Media Posts -->
+        <div class="social-posts">
+            <!-- Facebook Post -->
+            <div class="social-post facebook">
+                <div class="post-header">
+                    <img src="{{ url_for('static', filename='images/logo-small.png') }}" alt="PRALDA"
+                        class="post-avatar">
+                    <div class="post-info">
+                        <h4>Pralda</h4>
+                        <p>Hace 2 horas</p>
+                    </div>
+                    <div class="post-platform">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>El día de hoy domingo 23 de enero, se Firmó el Presupuesto por ejercicio de recursos destinados a
+                        servicios ambientales, en la localidad de Nuevo Progreso, Municipio de Maravilla Tenejapa,
+                        Chiapas, con la presencia del Comisariado Ejidal de Nuevo Progreso - PRALDA, con el señor Jesús
+                        Aguilar Presidente Comunal de Puerto Bello Meyapac, del Distrito de Maravilla, Provincia del
+                        Distrito Lacandón, Chiapas.</p>
+                </div>
+                <div class="post-image">
+                    <img src="{{ url_for('static', filename='images/social/facebook-post-1.jpg') }}"
+                        alt="Publicación de Facebook">
+                </div>
+                <div class="post-footer">
+                    <span><i class="far fa-thumbs-up"></i> 5</span>
+                    <span><i class="far fa-comment"></i> Comentar</span>
+                    <span><i class="far fa-share-square"></i> 3</span>
+                </div>
+            </div>
+
+            <!-- Instagram Post -->
+            <div class="social-post instagram">
+                <div class="post-header">
+                    <img src="{{ url_for('static', filename='images/logo-small.png') }}" alt="PRALDA"
+                        class="post-avatar">
+                    <div class="post-info">
+                        <h4>Pralda</h4>
+                        <p>Hace 5 horas</p>
+                    </div>
+                    <div class="post-platform">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Ayer tuvimos una reunión con el señor Jesús Aguilar Presidente de la Comunidad Campesina Puerto
+                        Bello Meyapac, del Distrito de Maravilla, Provincia del Distrito Lacandón, Chiapas, para la
+                        firma de convenio de colaboración y apoyo de comprometerse a través de PRALDA.</p>
+                </div>
+                <div class="post-image">
+                    <img src="{{ url_for('static', filename='images/social/instagram-post.jpg') }}"
+                        alt="Publicación de Instagram">
+                </div>
+                <div class="post-footer">
+                    <span><i class="far fa-heart"></i> 12</span>
+                    <span><i class="far fa-comment"></i> Comentar</span>
+                    <span><i class="far fa-bookmark"></i> 4</span>
+                </div>
+            </div>
+
+            <!-- Twitter Post -->
+            <div class="social-post twitter">
+                <div class="post-header">
+                    <img src="{{ url_for('static', filename='images/logo-small.png') }}" alt="PRALDA"
+                        class="post-avatar">
+                    <div class="post-info">
+                        <h4>Pralda</h4>
+                        <p>Hace 12 horas</p>
+                    </div>
+                    <div class="post-platform">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Primera documentación de la Biodiversidad en la Reserva Comunitaria de Conservación, Proyecto
+                        "REDD+ Aviación", a través de cámaras con los ejidos de Emiliano Zapata, Niños Héroes, Agua
+                        Azul, Nuevo Progreso y por la comunidad de Puerto Bello Meyapac, con el objetivo de monitorear
+                        los mamíferos para reducir el calentamiento global.</p>
+                </div>
+                <div class="post-image">
+                    <img src="{{ url_for('static', filename='images/social/twitter-post.jpg') }}"
+                        alt="Publicación de Twitter">
+                </div>
+                <div class="post-footer">
+                    <span><i class="far fa-heart"></i> 8</span>
+                    <span><i class="far fa-comment"></i> Comentar</span>
+                    <span><i class="fas fa-retweet"></i> 5</span>
+                </div>
+            </div>
+
+            <!-- TikTok Post -->
+            <div class="social-post tiktok" style="display: none;">
+                <div class="post-header">
+                    <img src="{{ url_for('static', filename='images/logo-small.png') }}" alt="PRALDA"
+                        class="post-avatar">
+                    <div class="post-info">
+                        <h4>Pralda</h4>
+                        <p>Hace 8 horas</p>
+                    </div>
+                    <div class="post-platform">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>🌱 Conoce cómo las comunidades indígenas están protegiendo la Amazonía a través del Proyecto
+                        REDD+. Cada árbol cuenta para nuestro futuro. #PRALDA #Amazonía #Sostenibilidad</p>
+                </div>
+                <div class="post-image">
+                    <img src="{{ url_for('static', filename='images/social/tiktok-post.jpg') }}"
+                        alt="Publicación de TikTok">
+                </div>
+                <div class="post-footer">
+                    <span><i class="far fa-heart"></i> 25</span>
+                    <span><i class="far fa-comment"></i> Comentar</span>
+                    <span><i class="fas fa-share"></i> 12</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-form">
+                <h3>Llena el formulario y estaremos contactándonos contigo:</h3>
+
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                <form action="{{ url_for('contacto') }}" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="acepta_politica" name="acepta_politica" required>
+                        <label for="acepta_politica">Acepto la Política de Privacidad de PRALDA</label>
+                    </div>
+
+                    <button type="submit" class="btn primary">ENVIAR</button>
+                </form>
+            </div>
+
+            <div class="contact-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const socialLinks = document.querySelectorAll('.social-link-item');
+        const socialPosts = document.querySelectorAll('.social-post');
+        const socialPostsContainer = document.querySelector('.social-posts');
+
+        // Función para mostrar todos los posts
+        function showAllPosts() {
+            socialPosts.forEach(post => {
+                post.classList.remove('hidden');
+            });
+            socialPostsContainer.classList.remove('filtered');
+        }
+
+        // Función para filtrar posts por red social
+        function filterPosts(platform) {
+            socialPostsContainer.classList.add('filtered');
+
+            socialPosts.forEach(post => {
+                if (post.classList.contains(platform)) {
+                    post.classList.add('active-filter');
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.remove('active-filter');
+                    post.classList.add('hidden');
+                }
+            });
+        }
+
+        // Agregar event listeners a los botones
+        socialLinks.forEach((link, index) => {
+            const button = link.querySelector('.btn');
+            const platform = link.dataset.platform;
+
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Remover clase active de todos los links
+                socialLinks.forEach(l => l.classList.remove('active'));
+
+                // Si el link clickeado ya estaba activo, mostrar todos
+                if (link.classList.contains('active')) {
+                    showAllPosts();
+                } else {
+                    // Agregar clase active al link clickeado
+                    link.classList.add('active');
+
+                    // Filtrar posts según la plataforma
+                    filterPosts(platform);
+                }
+            });
+        });
+
+        // Mostrar todos los posts inicialmente
+        showAllPosts();
+    });
+</script>

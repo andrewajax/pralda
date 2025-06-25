@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ noticia.titulo if noticia else 'Detalle de Noticia' }} - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/noticia-detalle-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero noticia-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>{{ noticia.titulo if noticia else 'NOMBRE DE LA NOTA DE PRENSA' }}</h1>
+    </div>
+</section>
+
+<!-- Article Section -->
+<section class="article-section">
+    <div class="container">
+        <div class="article-content">
+            <div class="article-main">
+                <div class="article-meta">
+                    <div class="article-date">
+                        <img src="{{ url_for('static', filename='images/icons/clock.svg') }}" alt="Fecha" width="16"
+                            height="16">
+                        <span>Hace 2 horas</span>
+                    </div>
+                    <div class="article-actions">
+                        <button class="action-btn share" title="Compartir">
+                            <img src="{{ url_for('static', filename='images/icons/share.svg') }}" alt="Compartir"
+                                width="20" height="20">
+                        </button>
+                        <button class="action-btn link" title="Copiar enlace">
+                            <img src="{{ url_for('static', filename='images/icons/link.svg') }}" alt="Copiar enlace"
+                                width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="article-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta urna vitae sapien rutrum,
+                        viverra
+                        mollis elit porta. Maecenas rutrum elit non dictum tempus. Interdum et malesuada fames ac ante
+                        ipsum primis in faucibus. Integer eget leo ligula. Nullam et dolor mauris. Sed a vestibulum
+                        ante.
+                        Nunc scelerisque viverra leo, vitae auctor ligula lacinia ac. Suspendisse sagittis justo sit
+                        amet arcu
+                        consectetur.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta urna vitae sapien rutrum,
+                        viverra
+                        mollis elit porta. Maecenas rutrum elit non dictum tempus. Interdum et malesuada fames ac ante
+                        ipsum primis in faucibus. Integer eget leo ligula. Nullam et dolor mauris. Sed a vestibulum
+                        ante.
+                        Nunc scelerisque viverra leo, vitae auctor ligula lacinia ac. Suspendisse sagittis justo sit
+                        amet arcu
+                        consectetur.</p>
+                </div>
+
+                <div class="article-image">
+                    <img src="{{ url_for('static', filename='images/example.png') }}"
+                        alt="{{ noticia.titulo if noticia else 'Imagen del artículo' }}">
+                </div>
+
+                <div class="article-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta urna vitae sapien rutrum,
+                        viverra
+                        mollis elit porta. Maecenas rutrum elit non dictum tempus. Interdum et malesuada fames ac ante
+                        ipsum primis in faucibus. Integer eget leo ligula. Nullam et dolor mauris. Sed a vestibulum
+                        ante.
+                        Nunc scelerisque viverra leo, vitae auctor ligula lacinia ac. Suspendisse sagittis justo sit
+                        amet arcu
+                        consectetur.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta urna vitae sapien rutrum,
+                        viverra
+                        mollis elit porta. Maecenas rutrum elit non dictum tempus. Interdum et malesuada fames ac ante
+                        ipsum primis in faucibus.</p>
+                </div>
+            </div>
+
+            <div class="article-sidebar">
+                <h3>RELACIONADOS:</h3>
+
+                <div class="related-articles">
+                    {% for i in range(3) %}
+                    <div class="related-article">
+                        <a href="{{ url_for('noticia_detalle', noticia_id=i+2) }}">
+                            <div class="related-image">
+                                <img src="{{ url_for('static', filename='images/example.png') }}"
+                                    alt="Noticia relacionada {{ i+1 }}">
+                            </div>
+                            <div class="related-info">
+                                <h4>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. UT PORTA URNA VITAE SAPIEN
+                                    RUTRUM</h4>
+                                <div class="related-date">
+                                    <img src="{{ url_for('static', filename='images/icons/clock.svg') }}" alt="Fecha"
+                                        width="12" height="12">
+                                    <span>Hace 2 horas</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto-noticia">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="{{ url_for('contacto') }}" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

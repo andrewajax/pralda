@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Galería Multimedia - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero galeria-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="icon-container">
+            <img src="{{ url_for('static', filename='images/hand-plant.svg') }}" alt="Mano sosteniendo planta"
+                width="80" height="80">
+        </div>
+
+        <h1>MOMENTOS DEL PROGRESO DE PRALDA</h1>
+
+        <p>
+            Descubre los momentos clave y avances logrados por nuestro equipo en la protección de la
+            Amazonía y el bienestar de sus comunidades.
+        </p>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+    <div class="container">
+        <div class="gallery-grid">
+            {% for i in range(1, 7) %}
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Foto de la galería {{ i }}">
+                <div class="gallery-caption">
+                    <p>Leyenda de la fotografía {{ i }} (cual describe quienes y qué es lo que se dirán en la imagen)
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="pagination-arrow prev">&lt;</a>
+            <a href="#" class="pagination-number active">1</a>
+            <a href="#" class="pagination-number">2</a>
+            <a href="#" class="pagination-number">3</a>
+            <a href="#" class="pagination-number">4</a>
+            <span class="pagination-dots">...</span>
+            <a href="#" class="pagination-number">200</a>
+            <a href="#" class="pagination-arrow next">&gt;</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto-galeria">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="{{ url_for('contacto') }}" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

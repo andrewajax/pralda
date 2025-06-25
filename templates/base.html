@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PRALDA - Programa Proyecto Ambiental al Desarrollo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed-header">
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo-white.svg') }}" alt="PRALDA Logo" width="24"
+                    height="24">
+                <span>PRALDA</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="{{ 'active' if request.path == '/' else '' }}">
+                        <a href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="{{ 'active' if request.path == '/nosotros' else '' }}">
+                        <a href="{{ url_for('nosotros') }}">Nosotros</a>
+                    </li>
+                    <li class="{{ 'active' if request.path == '/proyectos' else '' }}">
+                        <a href="{{ url_for('proyectos') }}">Proyectos</a>
+                    </li>
+                    <li class="{{ 'active' if request.path == '/galeria' else '' }}">
+                        <a href="{{ url_for('galeria') }}">Galería Multimedia</a>
+                    </li>
+                    <li class="{{ 'active' if request.path == '/noticias' else '' }}">
+                        <a href="{{ url_for('noticias_lista') }}">Noticias</a>
+                    </li>
+                    <li class="{{ 'active' if request.path == '/contactos' else '' }}">
+                        <a href="{{ url_for('contacto') }}">Contactos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/logo-white.svg') }}" alt="PRALDA Logo" width="40"
+                        height="40">
+                    <span>PRALDA</span>
+                </div>
+
+                <div class="footer-contact">
+                    <p><img src="{{ url_for('static', filename='images/social-icons/phone.png') }}" alt="Teléfono"
+                            width="16" height="16"> 999 999 999</p>
+                    <p><img src="{{ url_for('static', filename='images/social-icons/local.png') }}" alt="Dirección"
+                            width="16" height="16"> Ingresar dirección si es que tiene</p>
+                    <p><img src="{{ url_for('static', filename='images/social-icons/gmail.png') }}" alt="Email"
+                            width="16" height="16"> correo@ejemplo.com</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Información Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Código de Ética</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/facebook.png') }}"
+                        alt="Facebook" width="24" height="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/instagram.png') }}"
+                        alt="Instagram" width="24" height="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/linkeding.png') }}"
+                        alt="LinkedIn" width="24" height="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/twitter.png') }}" alt="Twitter"
+                        width="24" height="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/youtube.png') }}" alt="YouTube"
+                        width="24" height="24"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/social-icons/pinterest.png') }}"
+                        alt="Pinterest" width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

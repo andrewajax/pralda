@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="icon-container">
+            <img src="{{ url_for('static', filename='images/hand-plant.svg') }}" alt="Mano sosteniendo planta"
+                width="80" height="80">
+        </div>
+
+        <h1>PROGRAMA PROYECTO AMBIENTAL<br>AL DESARROLLO PRALDA</h1>
+
+        <p>
+            El Programa PRALDA, de la ONG INCODES en la Amazonía peruana, promueve el desarrollo sostenible
+            mediante la preservación del ecosistema, la educación científica, el acceso a tecnología y el fomento del
+            ahorro, beneficiando a las comunidades locales.
+        </p>
+
+        <div class="buttons">
+            <button class="btn primary">LEER MÁS</button>
+            <button class="btn secondary">CONTACTO</button>
+        </div>
+    </div>
+</section>
+
+<!-- Quienes Somos Section -->
+<section id="quienes-somos" class="quienes-somos">
+    <div class="container">
+        <div class="quienes-somos-content">
+            <div class="quienes-somos-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Quienes Somos">
+            </div>
+            <div class="quienes-somos-text">
+                <h2>¿QUIENES SOMOS?</h2>
+                <div class="conoce-mas-box">
+                    <h3>CONOCE MÁS DE NOSOTROS</h3>
+                    <p>PRALDA es un programa de protección ambiental en la Amazonía peruana, impulsado por la ONG
+                        INCODES, una iniciativa que busca promover el desarrollo sostenible a través de su "Proyecto
+                        Ambiental al Desarrollo".</p>
+                    <a href="#" class="btn-outline">CONOCE MÁS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>NOSOTROS</h3>
+                <p>PRALDA impulsa modelos sostenibles en la Amazonía, apoyando a las comunidades y preservando el
+                    ecosistema.</p>
+            </div>
+            <div class="info-card">
+                <h3>VISIÓN</h3>
+                <p>Combinamos sabiduría indígena y tecnología para un impacto positivo en la Amazonía, promoviendo la
+                    conservación e investigación.</p>
+            </div>
+            <div class="info-card">
+                <h3>OBJETIVO</h3>
+                <p>El objetivo principal del Programa PRALDA es proteger la Amazonía, fomentar el desarrollo sostenible
+                    y mejorar la vida de las comunidades locales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Proyecto REDD+ Section -->
+<section id="proyectos" class="proyecto-redd">
+    <div class="container">
+        <h2>Nuestro Proyecto Redd+<br>Voluntario Comunal</h2>
+
+        <div class="proyecto-content">
+            <div class="proyecto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Mapa de Perú">
+                <div class="slider-controls">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+            <div class="proyecto-text">
+                <h3>PDD: CONSTRUYENDO UN FUTURO, RENOVANDO VÍNCULOS ENTRE PUEBLOS Y BOSQUES SOSTENIBLES DESDE NUESTRAS
+                    RAÍCES</h3>
+                <p>El Proyecto REDD+ en Perú, liderado por INCODES y 17 comunidades indígenas, busca conservar los
+                    bosques y mejorar la vida local. Con un enfoque comunitario, crea comités para monitorear los
+                    bosques y estudiar la biodiversidad, contribuyendo a la conservación y mitigando el cambio
+                    climático.</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Más Proyectos Section -->
+<section class="mas-proyectos">
+    <div class="container">
+        <div class="mas-proyectos-content">
+            <div class="mas-proyectos-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Indígena en la selva">
+            </div>
+            <div class="mas-proyectos-text">
+                <h2>MÁS DE NUESTROS PROYECTOS</h2>
+                <p>Aprende más sobre nuestra labor y trabajo, cualquier duda estamos listos para ello.</p>
+                <a href="#" class="btn primary">LEER MÁS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="#" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

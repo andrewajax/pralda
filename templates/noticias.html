@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% block title %}Noticias - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/noticias-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero noticias-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="icon-container">
+            <img src="{{ url_for('static', filename='images/hand-plant.svg') }}" alt="Mano sosteniendo planta"
+                width="80" height="80">
+        </div>
+
+        <h1>EVENTOS Y ACTIVIDADES<br>DESDE NUESTRAS REDES SOCIALES</h1>
+
+        <div class="search-container">
+            <form action="{{ url_for('noticias_lista') }}" method="get">
+                <input type="text" name="q" placeholder="Busca una publicación" class="search-input">
+                <button type="submit" class="search-button">
+                    <img src="{{ url_for('static', filename='images/icons/search.svg') }}" alt="Buscar" width="20"
+                        height="20">
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Featured News Section -->
+<section class="featured-news">
+    <div class="container">
+        <div class="featured-content">
+            <div class="featured-main">
+                <div class="featured-image">
+                    <a href="{{ url_for('noticia_detalle', noticia_id=1) }}">
+                        <img src="{{ url_for('static', filename='images/example.png') }}" alt="Noticia Destacada">
+                    </a>
+                    <div class="featured-date">
+                        <img src="{{ url_for('static', filename='images/icons/calendar.svg') }}" alt="Fecha" width="16"
+                            height="16">
+                        <span>Julio, 05 - 2024</span>
+                    </div>
+                </div>
+
+                <div class="featured-info">
+                    <h2>
+                        <a href="{{ url_for('noticia_detalle', noticia_id=1) }}">
+                            LOREM IPSUM DOLOR SIT AMET, DOLOR SIT AMET CONSECTETUR
+                        </a>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, dolor sit amet consectetur. Lorem ipsum dolor sit amet, dolor sit
+                        amet consectetur Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+
+            <div class="calendar-widget">
+                <div class="calendar-header">
+                    <h3>June 2020</h3>
+                    <div class="calendar-nav">
+                        <button class="calendar-nav-btn prev">&lt;</button>
+                        <button class="calendar-nav-btn next">&gt;</button>
+                    </div>
+                </div>
+
+                <div class="calendar-days">
+                    <div class="day-header">SUN</div>
+                    <div class="day-header">MON</div>
+                    <div class="day-header">TUE</div>
+                    <div class="day-header">WED</div>
+                    <div class="day-header">THU</div>
+                    <div class="day-header">FRI</div>
+                    <div class="day-header">SAT</div>
+
+                    <!-- Días del mes -->
+                    <div class="day empty"></div>
+                    <div class="day">01</div>
+                    <div class="day">02</div>
+                    <div class="day">03</div>
+                    <div class="day">04</div>
+                    <div class="day">05</div>
+                    <div class="day">06</div>
+                    <div class="day">07</div>
+                    <div class="day">08</div>
+                    <div class="day">09</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day active">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                    <div class="day">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                    <div class="day">24</div>
+                    <div class="day">25</div>
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                    <div class="day empty"></div>
+                    <div class="day empty"></div>
+                    <div class="day empty"></div>
+                    <div class="day empty"></div>
+                </div>
+
+                <div class="calendar-footer">
+                    <button class="btn primary">BUSCAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News List Section -->
+<section class="news-list">
+    <div class="container">
+        <div class="news-items">
+            {% for i in range(4) %}
+            <div class="news-item">
+                <div class="news-image">
+                    <a href="{{ url_for('noticia_detalle', noticia_id=i+2) }}">
+                        <img src="{{ url_for('static', filename='images/example.png') }}" alt="Noticia {{ i+1 }}">
+                    </a>
+                </div>
+                <div class="news-info">
+                    <div class="news-date">
+                        <img src="{{ url_for('static', filename='images/icons/calendar.svg') }}" alt="Fecha" width="16"
+                            height="16">
+                        <span>Julio, 0{{ i+5 }} - 2024</span>
+                    </div>
+                    <h3>
+                        <a href="{{ url_for('noticia_detalle', noticia_id=i+2) }}">
+                            LOREM IPSUM DOLOR SIT AMET, DOLOR SIT AMET CONSECTETUR
+                        </a>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, dolor sit amet consectetur. Lorem ipsum dolor sit amet, dolor sit
+                        amet consectetur Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="pagination-arrow prev">&lt;</a>
+            <a href="#" class="pagination-number active">1</a>
+            <a href="#" class="pagination-number">2</a>
+            <a href="#" class="pagination-number">3</a>
+            <a href="#" class="pagination-number">4</a>
+            <span class="pagination-dots">...</span>
+            <a href="#" class="pagination-number">200</a>
+            <a href="#" class="pagination-arrow next">&gt;</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto-noticias">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="{{ url_for('contacto') }}" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

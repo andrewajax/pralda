@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+
+{% block title %}Proyectos - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/proyectos-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero proyectos-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="icon-container">
+            <img src="{{ url_for('static', filename='images/hand-plant.svg') }}" alt="Mano sosteniendo planta"
+                width="80" height="80">
+        </div>
+
+        <h1>EL PROYECTO REDD+</h1>
+
+        <p>
+            Este proyecto pionero liderado por la ONG INCODES a través del Programa PRALDA, en colaboración con 17
+            comunidades indígenas, busca conservar los bosques nativos mediante soluciones comunitarias. Su objetivo es
+            proteger los
+            ecosistemas forestales, mejorar los medios de vida de los pueblos indígenas y mitigar el cambio climático.
+        </p>
+    </div>
+</section>
+
+<!-- PDD Section -->
+<section class="pdd-section">
+    <div class="container">
+        <div class="pdd-content">
+            <div class="pdd-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Mapa del Proyecto REDD+">
+            </div>
+            <div class="pdd-text">
+                <h2>PDD: CONSTRUYENDO UN FUTURO, RENOVANDO VÍNCULOS ENTRE PUEBLOS Y BOSQUES SOSTENIBLES DESDE NUESTRAS
+                    RAÍCES</h2>
+                <p>
+                    El Proyecto REDD+ en Perú, liderado por INCODES y 17 comunidades indígenas, busca conservar los
+                    bosques y mejorar la vida local. Con un enfoque comunitario, crea comités para monitorear los
+                    bosques y estudiar la
+                    biodiversidad, contribuyendo a la conservación y mitigación del cambio climático.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comités para la Conservación Section -->
+<section class="comites-section">
+    <div class="container">
+        <h2>Comités para la Conservación</h2>
+        <p class="section-subtitle">El Proyecto REDD+ Voluntario crea dos comités clave:</p>
+
+        <div class="comites-cards">
+            <div class="comite-card">
+                <div class="comite-icon">
+                    <img src="{{ url_for('static', filename='images/icons/forest.svg') }}" alt="Bosque">
+                </div>
+                <h3>Comité de Vigilancia y Monitoreo Forestal:</h3>
+                <p>Supervisa la salud de los bosques y detecta actividades dañinas.</p>
+            </div>
+
+            <div class="comite-card">
+                <div class="comite-icon">
+                    <img src="{{ url_for('static', filename='images/icons/flower.svg') }}" alt="Flora y Fauna">
+                </div>
+                <h3>Comité de Investigación de Flora y Fauna:</h3>
+                <p>Investiga las especies existentes y nuevas, promoviendo la conservación de la biodiversidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Distribución de Ingresos Section -->
+<section class="ingresos-section">
+    <div class="container">
+        <div class="ingresos-content">
+            <div class="ingresos-text">
+                <h2>Distribución de Ingresos por Créditos de Carbono</h2>
+
+                <div class="ingreso-card">
+                    <div class="ingreso-icon">
+                        <img src="{{ url_for('static', filename='images/icons/indigenous.svg') }}" alt="Comunidades">
+                    </div>
+                    <div class="ingreso-info">
+                        <h3>75% Para las comunidades</h3>
+                        <p>
+                            Las comunidades participantes reciben el 75% de los ingresos generados por la venta de los
+                            VCUs. Estos fondos se manejan a través de un fideicomiso en el Banco BCP y se destinan a la
+                            ejecución de los Planes de Vida Comunal (45%) y Familiar (55%).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ingreso-card">
+                    <div class="ingreso-icon">
+                        <img src="{{ url_for('static', filename='images/icons/global.svg') }}" alt="ONG">
+                    </div>
+                    <div class="ingreso-info">
+                        <h3>El 25% para la ONG INCODES</h3>
+                        <p>
+                            INCODES, a través del Programa PRALDA, recibe el 25% de los ingresos para cubrir los costos
+                            de gestión y garantizar que los recursos se utilicen de manera transparente y efectiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ingresos-image">
+                <div class="carbon-circle">
+                    <div class="co2-text">CO₂</div>
+                    <div class="money-symbols">$$$</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Planes de Vida Section -->
+<section class="planes-vida-section">
+    <div class="container">
+        <h2>Comités para la Conservación</h2>
+        <p class="section-subtitle">El Proyecto REDD+ Voluntario crea dos comités clave:</p>
+
+        <div class="planes-cards">
+            <div class="plan-card">
+                <h3>Planes de Vida Familiar</h3>
+                <p>
+                    El 55% de los fondos se destina a los Planes de Vida Familiar, beneficiando directamente a los
+                    hogares. Estos recursos se distribuyen mensualmente durante los 20 años que dura el
+                    proyecto, proporcionando ingresos constantes a las familias
+                </p>
+            </div>
+
+            <div class="plan-card">
+                <h3>Planes de Vida Comunal</h3>
+                <p>
+                    Las autoridades de cada comunidad administran los recursos de sus Planes de Vida Comunal,
+                    asegurando que se alineen con sus prioridades colectivas. Estas obras y servicios se licitan y se
+                    gestionan directamente por las comunidades.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Monitoreo Section -->
+<section class="monitoreo-section">
+    <div class="container">
+        <h2>Monitoreo y Vigilancia en Tiempo Real</h2>
+
+        <div class="monitoreo-content">
+            <div class="monitoreo-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Monitoreo">
+            </div>
+
+            <div class="monitoreo-info">
+                <div class="monitoreo-card">
+                    <h3>Monitoreo Satelital por Global Forest Watch</h3>
+                    <p>
+                        Las 17 comunidades participantes, que abarcan un total de 135,557 hectáreas de
+                        bosques, están vigiladas 24/7 por satélite, supervisando la pérdida de cobertura
+                        forestal, tala ilegal y otras actividades perjudiciales.
+                    </p>
+                </div>
+
+                <div class="monitoreo-card">
+                    <h3>Monitoreo de Biodiversidad y Recursos Naturales con RESTO</h3>
+                    <p>
+                        Gracias a RESTOR, se monitorea la biodiversidad, el stock de carbono, las
+                        reservas de agua y la variedad de especies en las comunidades. Esta tecnología
+                        asegura un control constante durante todo el año, contribuyendo al
+                        cumplimiento de los objetivos del proyecto y de los Objetivos de Desarrollo del
+                        Milenio (ODM).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Localidades Section -->
+<section class="localidades-section">
+    <div class="container">
+        <h2>Localidades del Proyecto Redd+ Voluntario Comunal</h2>
+
+        <div class="localidades-slider">
+            <div class="localidades-content">
+                <div class="localidades-image">
+                    <img src="{{ url_for('static', filename='images/example.png') }}" alt="Mapa de Localidad">
+                    <div class="slider-controls">
+                        <button class="prev-btn">&lt;</button>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </div>
+                <div class="localidades-info">
+                    <h3>Comunidad Nativa Nueva Esperanza y Anexos 28 de julio, Pionero, Santa Cruz, Santa Silvia, Pucuna
+                        y Siamba</h3>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto-proyectos">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="{{ url_for('contacto') }}" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

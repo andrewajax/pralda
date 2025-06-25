@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% block title %}Nosotros - PRALDA{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nosotros-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero nosotros-hero">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="icon-container">
+            <img src="{{ url_for('static', filename='images/hand-plant.svg') }}" alt="Mano sosteniendo planta"
+                width="80" height="80">
+        </div>
+
+        <h1>PRESERVAMOS LA AMAZONÍA PARA<br>UN FUTURO SOSTENIBLE</h1>
+
+        <p>
+            Impulsamos la conservación de los ecosistemas amazónicos, mejorando la calidad de vida de las
+            comunidades locales a través de educación, innovación tecnológica y prácticas sostenibles.
+        </p>
+
+        <div class="buttons">
+            <a href="#quienes-somos" class="btn primary">LEER MÁS</a>
+        </div>
+    </div>
+</section>
+
+<!-- Quiénes Somos Section -->
+<section id="quienes-somos" class="quienes-somos-page">
+    <div class="container">
+        <div class="quienes-somos-card">
+            <div class="quienes-somos-content">
+                <div class="quienes-somos-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>
+                        PRALDA nació para impulsar modelos económicos sostenibles
+                        en la Amazonía peruana. Nos enfocamos en preservar los
+                        servicios ecosistémicos, beneficiando directamente a las
+                        comunidades locales y combatiendo el cambio climático.
+                        Nuestro compromiso es restaurar, conservar e investigar los
+                        ecosistemas amazónicos, devolviendo la productividad a áreas
+                        degradadas mediante prácticas sostenibles.
+                    </p>
+                    <a href="#contacto" class="btn primary">CONTÁCTANOS</a>
+                </div>
+                <div class="quienes-somos-image">
+                    <img src="{{ url_for('static', filename='images/example.png') }}" alt="Equipo PRALDA">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visión y Enfoque Section -->
+<section class="vision-enfoque">
+    <div class="container">
+        <div class="cards-container">
+            <div class="info-card vision-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icons/target.svg') }}" alt="Visión">
+                </div>
+                <h3>Nuestra Visión</h3>
+                <p>
+                    Creemos en la unión del saber indígena y la tecnología
+                    moderna para generar un impacto duradero en la
+                    Amazonía. La educación, conservación y investigación
+                    son los pilares que guían nuestra misión de proteger el
+                    medio ambiente y mejorar la calidad de vida de las
+                    comunidades.
+                </p>
+            </div>
+
+            <div class="info-card enfoque-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icons/eye.svg') }}" alt="Enfoque">
+                </div>
+                <h3>Nuestro Enfoque</h3>
+                <p>
+                    Aplicamos tecnología sostenible para restaurar
+                    ecosistemas, promover sistemas agroforestales y
+                    proteger la biodiversidad. Trabajamos junto a
+                    comunidades locales para garantizar un impacto
+                    positivo y sostenible tanto para el medio ambiente
+                    como para las personas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Nuestro Equipo Section -->
+<section class="nuestro-equipo">
+    <div class="container">
+        <h2>Nuestro equipo</h2>
+
+        <div class="equipo-cards">
+            <div class="equipo-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icons/indigenous.svg') }}" alt="Equipo Indígena">
+                </div>
+                <h3>Equipo Indígena</h3>
+                <p>
+                    Nuestros miembros indígenas
+                    aportan su sabiduría ancestral
+                    y su profundo respeto por la
+                    naturaleza, esenciales para la
+                    preservación de los
+                    ecosistemas amazónicos.
+                </p>
+            </div>
+
+            <div class="equipo-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icons/global.svg') }}"
+                        alt="Colaboradores Internacionales">
+                </div>
+                <h3>Colaboradores Internacionales</h3>
+                <p>
+                    Trabajamos con expertos
+                    internacionales que nos
+                    brindan tecnología y ciencia
+                    moderna, creando un equilibrio
+                    entre tradición y sostenibilidad.
+                </p>
+            </div>
+
+            <div class="equipo-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icons/peru.svg') }}" alt="Colaboración Local">
+                </div>
+                <h3>Colaboración Local</h3>
+                <p>
+                    Junto a las comunidades,
+                    promovemos un enfoque
+                    participativo para proteger
+                    la naturaleza y asegurar un
+                    futuro sostenible.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Objetivos Section -->
+<section class="objetivos">
+    <div class="container">
+        <h2>Los 11 objetivos del Programa PRALDA</h2>
+
+        <div class="objetivos-grid">
+            <div class="objetivo-card">
+                <h3>Revitalizando la Tierra</h3>
+                <p>
+                    Restauramos las áreas degradadas de la
+                    Amazonía, plantando especies en forma de
+                    árboles y sistemas agroforestales que devuelven
+                    vida y productividad al suelo.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Invirtiendo en el Futuro de la Amazonía</h3>
+                <p>
+                    Atraemos inversiones en servicios ecosistémicos
+                    como bonos de carbono y biodiversidad,
+                    generando un impacto positivo tanto para el
+                    medio ambiente como para las personas.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Protegiendo la Vida</h3>
+                <p>
+                    Trabajamos incansablemente para conservar la
+                    biodiversidad, creando ecosistemas naturales que
+                    cuiden y fortalezcan la vida en todas sus formas.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Asegurando un Mañana Sostenible</h3>
+                <p>
+                    Vigilamos el estado ambiental constantemente para
+                    garantizar que cada paso que damos hoy sea un
+                    paso firme hacia un futuro más sostenible.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Tecnología para un Futuro Mejor</h3>
+                <p>
+                    Abrimos las puertas a la tecnología avanzada,
+                    ayudando a las comunidades a mejorar sus
+                    prácticas agrícolas y forestales, asegurando un
+                    futuro sostenible.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Llevando Esperanza en Forma de Servicios</h3>
+                <p>
+                    Facilitamos el acceso a servicios esenciales como
+                    agua, luz, internet, salud y educación, utilizando
+                    tecnologías que respetan el medio ambiente y
+                    mejoran la calidad de vida.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Sembrando Conocimiento</h3>
+                <p>
+                    Promovemos la investigación y la educación en
+                    las comunidades para proteger la flora y fauna de
+                    sus tierras ancestrales, transmitiendo este valioso
+                    conocimiento a las generaciones futuras.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Tecnología para un Futuro Mejor</h3>
+                <p>
+                    Abrimos las puertas a la tecnología avanzada,
+                    ayudando a las comunidades a mejorar sus
+                    prácticas agrícolas y forestales, asegurando un
+                    futuro sostenible.
+                </p>
+            </div>
+
+            <div class="objetivo-card">
+                <h3>Uniendo Fuerzas con las Comunidades</h3>
+                <p>
+                    Fomentamos la participación activa de las
+                    comunidades nativas, campesinas y ribereñas,
+                    haciéndolas protagonistas en la conservación de
+                    sus recursos naturales.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section id="contacto" class="contacto-nosotros">
+    <div class="container">
+        <div class="contacto-content">
+            <div class="contacto-text">
+                <h2>SE PARTE DEL CAMBIO</h2>
+                <p>Estamos listos para disipar cualquier duda que tengas o si quieres ayudar estamos para servirte.</p>
+                <a href="{{ url_for('contacto') }}" class="btn primary">CONTÁCTANOS</a>
+            </div>
+            <div class="contacto-image">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="Persona en el bosque">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
